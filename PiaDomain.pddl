@@ -16,7 +16,7 @@
         (at ?combi ?lugar)
         (es-gasolinera ?lugar)
         (es-parada ?lugar)
-        (Dejar ?Pasajero)
+        (Dejar ?Pasajero ?lugar)
         (lugar ?lugar)    
         (Pasajero ?Pasajero) 
         (combi ?combi)                             
@@ -91,7 +91,7 @@
             (and 
                 (is-in ?Pasajero ?lugar) 
                 (not (Abordo ?combi ?Pasajero))
-                (Dejar ?Pasajero)
+                (Dejar ?Pasajero ?lugar)
                 ;(decrease (Cantidad-Gasolina ?combi) 2)
                 (decrease (Asientos-Ocupados ?combi) 1))
     )
